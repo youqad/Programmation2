@@ -1,0 +1,5 @@
+"Resource: /Users/younessekaddar/Documents/Programmation2/TP1.ml": "Q\153\183\245\150\134\144\235yN\182k\242\224(\140"
+"Rule: ocaml dependencies ml (%=TP1 )": "(2C\184\023WYo\144\219y<w0\223\004"
+"Rule: ocaml: cmx* & o* -> native (%=TP1 )": "dm5\204qzh25\151;G\252\180\185@"
+"Rule: ocaml: ml & cmi -> cmx & o (%=TP1 )": "\ne\198\235\153\026\165\137\160\194^_\160\029 #"
+"Rule: ocaml: ml -> cmo & cmi (%=TP1 )": "\189i\031\154\017)\025q\227FH\153@\177[Z"
