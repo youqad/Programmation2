@@ -1,0 +1,16 @@
+file.cmo : file.cmi
+file.cmx : file.cmi
+notest1.cmo : file.cmi
+notest1.cmx : file.cmx
+notest2.cmo : file.cmi
+notest2.cmx : file.cmx
+notest3.cmo :
+notest3.cmx :
+notest4.cmo :
+notest4.cmx :
+strings.cmo : strings.cmi
+strings.cmx : strings.cmi
+test.cmo : file.cmi
+test.cmx : file.cmx
+file.cmi :
+strings.cmi :

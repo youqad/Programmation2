@@ -84,7 +84,29 @@ module type PContainer = sig
   val to_string : t -> string
 end
 
-
+module PContainer (S:Set.OrderedType) : (Container with type elt = S.t) =
+struct
+  type t = S.t list
+  type elt = S.t
+  let empty = []
+  let add el t =
+    let rec insert l1 el = function
+      | hd::tl when (S.compare hd el) < 0 -> insert (l1@[hd]) el tl
+      | l2 -> l1 @ (el::l2)
+    in insert [] el t
+  let rec merge l1 l2 = match l1, l2 with
+    | [], l -> l
+    | l, [] -> l
+    | (h1::t1), l2 when S.compare h1 (List.hd l2) < 0 ->  h1::(merge t1 l2)
+    | l, (h2::t2) ->  h2::(merge l t2)
+  let member el t =
+    let rec mem_ord el = function
+      | hd::tl when S.compare hd el <0 -> mem_ord el tl
+      | hd::tl when S.compare hd el  = 0 -> true
+      | _ -> false
+    in mem_ord el t
+  let fold f a t = List.fold_left f a t
+end
 
 (*
 let () =

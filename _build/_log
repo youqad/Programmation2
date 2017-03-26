@@ -1,10 +1,10 @@
 ### Starting build.
-# Target: TP1.ml.depends, tags: { extension:ml, file:TP1.ml, ocaml, ocamldep, quiet }
-ocamldep.opt -modules TP1.ml > TP1.ml.depends
-# Target: TP1.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:TP1.cmo, file:TP1.ml, implem, ocaml, quiet }
-ocamlc.opt -c -o TP1.cmo TP1.ml
-# Target: TP1.cmx, tags: { compile, extension:cmx, extension:ml, file:TP1.cmx, file:TP1.ml, implem, native, ocaml, quiet }
-ocamlopt.opt -c -o TP1.cmx TP1.ml
-# Target: TP1.native, tags: { dont_link_with, extension:native, file:TP1.native, link, native, ocaml, program, quiet }
-ocamlopt.opt TP1.cmx -o TP1.native
+# Target: TP2.ml.depends, tags: { extension:ml, file:TP2.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules TP2.ml > TP2.ml.depends # cached
+# Target: TP2.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:TP2.cmo, file:TP2.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o TP2.cmo TP2.ml # cached
+# Target: TP2.cmx, tags: { compile, extension:cmx, extension:ml, file:TP2.cmx, file:TP2.ml, implem, native, ocaml, quiet }
+ocamlopt.opt -c -o TP2.cmx TP2.ml # cached
+# Target: TP2.native, tags: { dont_link_with, extension:native, file:TP2.native, link, native, ocaml, program, quiet }
+ocamlopt.opt TP2.cmx -o TP2.native # cached
 # Compilation successful.
